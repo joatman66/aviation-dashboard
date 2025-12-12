@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Aircraft Fleet | SIU Aviation{% endblock %}
+
+{% block content %}
+<h2>Active Aircraft (Filtered)</h2>
+<p>Filtered to remove blank tails and tails beginning with “T”.</p>
+
+{% if error %}
+<div class="card" style="border-color:#ef4444; margin-bottom:1rem;">
+  <strong>Data warning:</strong> {{ error }}
+</div>
+{% endif %}
+
+<div class="card-grid">
+  {% for ac in aircraft %}
+  <div class="card">
+    <div class="card-header">
+      <span class="tail-number">{{ ac.tail }}</span>
+      <span class="aircraft-type">{{ ac.aircraft_type or "—" }}</span>
+    </div>
+    <div class="card-body">
+      <div class="metric">
+        <span class="metric-label">Hobbs Hours</span>
+        <span class="metric-value">{{ "%.1f"|format(ac.hobbs) }}</span>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

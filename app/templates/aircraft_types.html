@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Aircraft Types (Debug) | SIU Aviation{% endblock %}
+
+{% block content %}
+<h2>Aircraft Types (ETA Raw)</h2>
+<p>Raw (unfiltered) type counts from ETA to validate what’s in the feed.</p>
+
+{% if error %}
+<div class="card" style="border-color:#ef4444; margin-bottom:1rem;">
+  <strong>Error:</strong> {{ error }}
+</div>
+{% endif %}
+
+<div class="card">
+  <table style="width:100%; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th style="text-align:left; padding:0.5rem; border-bottom:1px solid #1f2937;">Type</th>
+        <th style="text-align:right; padding:0.5rem; border-bottom:1px solid #1f2937;">Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for t, c in type_counts %}
+      <tr>
+        <td style="padding:0.4rem 0.5rem; border-bottom:1px solid #111827;">{{ t }}</td>
+        <td style="padding:0.4rem 0.5rem; border-bottom:1px solid #111827; text-align:right;">{{ c }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

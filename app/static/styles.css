@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.site-header, .site-footer {
+    background: #020617;
+    border-bottom: 1px solid #1f2937;
+}
+
+.site-footer {
+    border-top: 1px solid #1f2937;
+    border-bottom: none;
+    margin-top: 2rem;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: #9ca3af;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #f9fafb;
+}
+
+h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background: #020617;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    border: 1px solid #1f2937;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s;
+}
+
+.card-link:hover {
+    transform: translateY(-2px);
+    border-color: #3b82f6;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.6);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.75rem;
+}
+
+.tail-number {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.aircraft-type {
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #9ca3af;
+}
+
+.metric-value {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}

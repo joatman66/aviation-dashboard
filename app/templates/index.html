@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Dashboards | SIU Aviation{% endblock %}
+
+{% block content %}
+<h2>Available Dashboards</h2>
+<div class="card-grid">
+  {% for dash in dashboards %}
+  <a href="{{ dash.path }}" class="card card-link">
+    <h3>{{ dash.name }}</h3>
+    <p>{{ dash.description }}</p>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

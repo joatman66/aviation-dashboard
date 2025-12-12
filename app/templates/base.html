@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}SIU Aviation Dashboards{% endblock %}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <h1>SIU Aviation Dashboards</h1>
+    <nav>
+      <a href="{{ url_for('main.index') }}">Home</a>
+      <a href="{{ url_for('main.overview') }}">Overview</a>
+      <a href="{{ url_for('main.aircraft') }}">Aircraft</a>
+      <a href="{{ url_for('main.aircraft_types_debug') }}">Debug Types</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <small>&copy; 2025 SIU Aviation</small>
+  </div>
+</footer>
+</body>
+</html>
