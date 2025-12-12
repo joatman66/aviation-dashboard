@@ -1,7 +1,3 @@
-cat > requirements.txt << 'EOF'
 flask
 gunicorn
 requests
-EOF
-
-pip install -r requirements.txt
